@@ -1,6 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
+
+import CaracterCard from './CaracterCard'
 import Button from '@material-ui/core/Button'
 
 const baseUrl = 'https://rickandmortyapi.com/api/character'
@@ -8,7 +10,7 @@ const baseUrl = 'https://rickandmortyapi.com/api/character'
 
 
 export default function Container() {
-    // const characters = useSelector(state => state.anything)
+    const characters = useSelector(state => state.anything);
     const dispatch = useDispatch();
     const grab = () => {
         fetch(baseUrl)
@@ -20,20 +22,21 @@ export default function Container() {
         grab()
     }, [])
 
-    // const renderCharacters = () => {
-    //     return characters.map(character => {
-    //         // console.log(character.name, 'here')
-    //         return character.name
+    const renderCharacters = () => {
+        return characters.map(character => {
+            return (
+                <CaracterCard character={character}/>
+            )
 
-    //     })
-    // }
+        })
+    }
 
     return (
-        <div>
-            <Button variant='contained' color='primary'>
+        <div className='characterContainer'>
+            {/* <Button className='button' >
                 Hello World
-            </Button>
-            {/* {renderCharacters()} */}
+            </Button> */}
+            {renderCharacters()}
         </div>
     )
 }

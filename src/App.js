@@ -14,6 +14,7 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
+        <h1>This is woking out and i am Stoked!</h1>
           <Container/>
       </div>
     </Provider>
