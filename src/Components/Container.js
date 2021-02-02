@@ -25,7 +25,7 @@ export default function Container() {
     const renderCharacters = () => {
         return characters.map(character => {
             return (
-                <CaracterCard character={character}/>
+                <CaracterCard character={character} key={character.id}/>
             )
 
         })

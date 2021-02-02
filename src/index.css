@@ -1,4 +1,5 @@
 .App {
+  background-color:rgb(211, 207, 207);
 }
 
 .characterContainer {
@@ -9,12 +10,33 @@
 }
 
 .characterCard {
-  background-color: cadetblue;
-  margin: 2px;
+  background-color: whitesmoke;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.characterInfoContainer {
+  -moz-box-shadow:    inset 0 0 5px #000000;
+  -webkit-box-shadow: inset 0 0 5px #000000;
+  box-shadow:         inset 0 0 5px #000000;
+  margin: 3px;
+  padding-bottom: 1px;
+  border-radius: 20px;
+  align-items: center;
 }
 
 .characterName {
-  color: blue;
+  color: rgb(29, 29, 44);
+}
+
+.inputBase {
+  color: primary;
+  background-color: gray;
+  padding-left: 20px;
+  justify-self: center;
+}
+
+.input {
 }
 
 
