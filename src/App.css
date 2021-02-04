@@ -36,9 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.button {
-  margin-top: 15%,
-  variant='contained',
-  color='primary'
-}

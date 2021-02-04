@@ -13,7 +13,7 @@ const anything = (state=[], action) => {
 const myFav = (state=[], action) => {
   switch(action.type) {
     case 'FAVCHARACTER':
-      return [...action.myFav]
+      return [...state, action.myFav]
     default:
       return state
   }

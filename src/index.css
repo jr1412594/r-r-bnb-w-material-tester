@@ -36,10 +36,18 @@
   justify-self: center;
 }
 
-.characterImage {
+.favCharacterCard {
+  flex-direction: row;
 }
 
 .input {
+}
+
+.favContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: red0-,k,m;
 }
 
 

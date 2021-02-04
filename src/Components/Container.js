@@ -22,15 +22,15 @@ export default function Container() {
         grab()
     }, [])
 
-    const addFave = (character) => {
-        console.log(character,'here')
-        dispatch({ type: 'FAVCHARACTER', myFav: character})
-    }
+    // const addFave = (characters) => {
+    //     dispatch({ type: 'FAVCHARACTER', myFav: characters})
+    //     console.log(characters,'here')
+    // }
 
     const renderCharacters = () => {
         return characters.map(character => {
             return (
-                <CaracterCard character={character} key={character.id} onClick={addFave}/>
+                <CaracterCard character={character} key={character.id} />
             )
 
         })

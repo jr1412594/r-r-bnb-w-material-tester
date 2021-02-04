@@ -16,16 +16,16 @@ function App() {
   return (
     <Provider store={store}>
       <>
+        <div className="App">
       <div className='input'>
           <InputBase 
             className='inputBase' 
             placeholder="Enter here"
             />
       </div>
-      <div>
+      <div className='favContainer'>
         <FavContainer/>
       </div>
-      <div className="App">
         <h1>This is woking out and i am Stoked!</h1>
           <Container/>
       </div>
