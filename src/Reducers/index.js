@@ -10,6 +10,15 @@ const anything = (state=[], action) => {
   }
 }
 
+const myFav = (state=[], action) => {
+  switch(action.type) {
+    case 'FAVCHARACTER':
+      return [...action.myFav]
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
-    anything,
+    anything, myFav,
 })

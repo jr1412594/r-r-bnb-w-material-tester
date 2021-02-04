@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 
 import CaracterCard from './CaracterCard'
-import Button from '@material-ui/core/Button'
+
 
 const baseUrl = 'https://rickandmortyapi.com/api/character'
 
@@ -22,10 +22,15 @@ export default function Container() {
         grab()
     }, [])
 
+    const addFave = (character) => {
+        console.log(character,'here')
+        dispatch({ type: 'FAVCHARACTER', myFav: character})
+    }
+
     const renderCharacters = () => {
         return characters.map(character => {
             return (
-                <CaracterCard character={character} key={character.id}/>
+                <CaracterCard character={character} key={character.id} onClick={addFave}/>
             )
 
         })
@@ -33,9 +38,6 @@ export default function Container() {
 
     return (
         <div className='characterContainer'>
-            {/* <Button className='button' >
-                Hello World
-            </Button> */}
             {renderCharacters()}
         </div>
     )

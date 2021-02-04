@@ -1,9 +1,17 @@
 import React from 'react'
+// import { useDispatch } from 'react-redux'
 
 
 export default function CaracterCard({character}) {
+    // const dispatch = useDispatch()
+
+    // const addFave = () => {
+    //     console.log(character.name,'here')
+    //     dispatch({ type: 'FAVCHARACTER', myFav: character.name})
+    // }
+
     return (
-        <div className='characterCard'>
+        <div className='characterCard' >
             <h2 className ='characterName'>{character.name}</h2>
             <img className='characterImage' src={character.image} alt={character.name}/>
             <div className='characterInfoContainer'>

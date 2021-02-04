@@ -6,10 +6,11 @@ import InputBase from '@material-ui/core/InputBase'
 import reducers from './Reducers/index'
 import Container from './Components/Container'
 import './App.css';
+import FavContainer from './Components/FavContainer'
 
 const store = createStore(reducers);
 function App() {
-  
+
   
  
   return (
@@ -20,6 +21,9 @@ function App() {
             className='inputBase' 
             placeholder="Enter here"
             />
+      </div>
+      <div>
+        <FavContainer/>
       </div>
       <div className="App">
         <h1>This is woking out and i am Stoked!</h1>
