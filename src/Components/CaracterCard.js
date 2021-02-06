@@ -2,12 +2,15 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 
 
-export default function CaracterCard({ character }) {
+export default function CaracterCard({ character, myFav }) {
+    // const myFav = useSelector(state => state.myFav)
     const dispatch = useDispatch();
 
     const addFave = () => {
-        console.log(character,'here')
-        dispatch({ type: 'FAVCHARACTER', myFav: {character}})
+        console.log(myFav, 'what')
+        if(!myFav.find(fave => fave.id === character.id)) {
+            dispatch({ type: 'FAVCHARACTER', myFav: {character}})
+        }
     }
 
     return (

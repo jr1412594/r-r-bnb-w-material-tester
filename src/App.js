@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import InputBase from '@material-ui/core/InputBase'
+import TextField from '@material-ui/core/TextField'
 
 import reducers from './Reducers/index'
 import Container from './Components/Container'
@@ -17,18 +17,20 @@ function App() {
     <Provider store={store}>
       <>
         <div className="App">
-      <div className='input'>
-          <InputBase 
-            className='inputBase' 
-            placeholder="Enter here"
-            />
-      </div>
-      <div className='favContainer'>
-        <FavContainer/>
-      </div>
-        <h1>This is woking out and i am Stoked!</h1>
-          <Container/>
-      </div>
+          <div className='input'>
+            <TextField 
+              className='textField' 
+              label="Enter Search"
+              variant='outlined'
+              color='secondary'
+              />
+          </div>
+          <div>
+            <FavContainer/>
+          </div>
+            <h1>This is woking out and i am Stoked!</h1>
+            <Container/>
+        </div>
       </>
     </Provider>
 

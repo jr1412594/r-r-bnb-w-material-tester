@@ -5,19 +5,18 @@ import FavCaracterCard from './FavCaracterCard'
 
 export default function FavContainer() {
     const favCharacters = useSelector(state => state.myFav)
-    console.log(favCharacters, 'this')
 
     const renderFavCharacters = () => {
         return favCharacters.map(character => {
             return (
-                <FavCaracterCard character={character} key={character.id} />
+                <FavCaracterCard character={character} key={character.character.id} />
             )
 
         })
     }
     
     return (
-        <div>
+        <div className='favContainer'>
             {renderFavCharacters()}
         </div>
     )
